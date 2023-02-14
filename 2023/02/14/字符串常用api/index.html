@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="cc_chen">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/02/14/字符串常用api/"/>
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/avatar.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.svg">
+    <meta name="theme-color" content="#005080">
+    <link rel="shortcut icon" href="/images/avatar.svg">
+    
+    <title>
+        
+            字符串常用api |
+        
+        cc_chen博客
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/css/fonts.css">
+
+    
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"/images/avatar.svg","favicon":"/images/avatar.svg","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"https://evan.beee.top/img/wallhaven-wqery6-light.webp","dark":"https://evan.beee.top/img/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"这是cc_chen的个人博客"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.1.0","friend_links":{"columns":2}};
+    REDEFINE.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+    
+    
+<link rel="stylesheet" href="/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/css/regular.min.css">
+
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="menu-wrapper">
+    
+    <div class="menu-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                cc_chen博客
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        首页
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="menu-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                首页
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+             
+                <div class="article-title">         
+                    <img src="https://0xzx.com/wp-content/uploads/2021/05/0f7ab95b.png" alt="字符串常用api" />
+                    <h1 class="article-title-cover">字符串常用api</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">cc_chen</span>
+                            
+                                <span class="author-label">lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-02-14 10:42:52</span>
+        <span class="mobile">2023-02-14 10:42</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/javascript/">javascript</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h4 id="1-slice"><a href="#1-slice" class="headerlink" title="1.slice()"></a>1.slice()</h4><p>不会改变原字符串，返回被截取后的字符串</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result =  str.<span class="title function_">slice</span>(<span class="number">0</span>,<span class="number">2</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result,str) <span class="comment">//ab abcdefg</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2-split"><a href="#2-split" class="headerlink" title="2.split()"></a>2.split()</h4><p>不会改变元字符串，返回分割成的数组</p>
+<p>split(delimiter [,limit])</p>
+<p>delimiter：分割处的字符串或正则表达式。<br>limit: 指定已返回数组的最大长度。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> result2 = str.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>,<span class="number">2</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//abcdefg   [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result2) <span class="comment">//abcdefg     [&#x27;a&#x27;, &#x27;b&#x27;]</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="3-indexOf"><a href="#3-indexOf" class="headerlink" title="3.indexOf()"></a>3.indexOf()</h4><p>indexOf(value [,from])<br>在指定字符串中寻找一个字符或子串。只查找第一个，找不到返回 -1。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">indexOf</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> result2 = str.<span class="title function_">indexOf</span>(<span class="string">&#x27;h&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> result3 = str.<span class="title function_">indexOf</span>(<span class="string">&#x27;a&#x27;</span>,<span class="number">1</span>)</span><br><span class="line"><span class="keyword">let</span> result4 = str.<span class="title function_">indexOf</span>(<span class="string">&#x27;b&#x27;</span>,<span class="number">1</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//abcdefg 0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result2) <span class="comment">//abcdefg -1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result3) <span class="comment">// abcdefg -1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result4) <span class="comment">//abcdefg 1</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="4-lastIndexOf"><a href="#4-lastIndexOf" class="headerlink" title="4.lastIndexOf()"></a>4.lastIndexOf()</h4><p>lastIndexOf(value [,from])<br>在指定字符串中寻找一个字符或子串。只查找第一个，找不到返回 -1。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> result2 = str.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;h&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> result3 = str.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;c&#x27;</span>,<span class="number">1</span>)</span><br><span class="line"><span class="keyword">let</span> result4 = str.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;c&#x27;</span>,<span class="number">2</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//abcdefg 0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result2) <span class="comment">//abcdefg -1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result3) <span class="comment">// abcdefg -1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result4) <span class="comment">//abcdefg 2</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="5-concat"><a href="#5-concat" class="headerlink" title="5.concat()"></a>5.concat()</h4><p>concat(value)</p>
+<p>把value拼接到str上</p>
+<p>不会改变原字符串，返回拼接后的新字符串</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">concat</span>(<span class="string">&#x27;123&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//abcdefg abcdefg123</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="6-charAt"><a href="#6-charAt" class="headerlink" title="6.charAt()"></a>6.charAt()</h4><p>charAt(index) 和 str[index]</p>
+<p>获取指定位置字符。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">charAt</span>(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">let</span> result2 = str[<span class="number">2</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//abcdefg c</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result2) <span class="comment">//abcdefg c</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="7-trim"><a href="#7-trim" class="headerlink" title="7.trim()"></a>7.trim()</h4><p>去掉字符串前后空格。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;  abcdefg  &#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">trim</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//abcdefg abcdefg</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="7-charCodeAt"><a href="#7-charCodeAt" class="headerlink" title="7.charCodeAt()"></a>7.charCodeAt()</h4><p>charCodeAt(index)</p>
+<p>指定位置的字符转ASCII码   （返回的是一个整数，值在 0~65535 之间）</p>
+<p>如果 index 为负数或大于等于字符串的长度，则 charCodeAt() 将返回 NaN。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">charCodeAt</span>(<span class="number">0</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//abcdefg 97</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="8-fromCharCode"><a href="#8-fromCharCode" class="headerlink" title="8.fromCharCode()"></a>8.fromCharCode()</h4><p>fromCharCode(c1, c2, …)</p>
+<p>跟 str.charCodeAt() 相反的操作，把 ASCII码 转成字符串。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result = <span class="title class_">String</span>.<span class="title function_">fromCharCode</span>(<span class="number">97</span>,<span class="number">98</span>,<span class="number">99</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result) <span class="comment">// abc</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="9-toUpperCase"><a href="#9-toUpperCase" class="headerlink" title="9.toUpperCase()"></a>9.toUpperCase()</h4><p>转成大写 (不会改变原字符串，返回新的字符串)</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">toUpperCase</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//abcdefg ABCDEFG</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="10-toLowerCase"><a href="#10-toLowerCase" class="headerlink" title="10.toLowerCase()"></a>10.toLowerCase()</h4><p>转成小写 (不会改变原字符串，返回新的字符串)</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;ABCDEFG&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">toLowerCase</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//ABCDEFG abcdefg</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="11-includes"><a href="#11-includes" class="headerlink" title="11.includes()"></a>11.includes()</h4><p>includes(searchvalue[, start])</p>
+<p>用于判断字符串是否包含指定的子字符串。<br>如果找到匹配的字符串则返回 true，否则返回 false。</p>
+<p>searchvalue	必需，要查找的字符串。<br>start	可选，设置从那个位置开始查找，默认为 0。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;ABCDEFG&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">includes</span>(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str, result) <span class="comment">//ABCDEFG true</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="12-replace"><a href="#12-replace" class="headerlink" title="12.replace()"></a>12.replace()</h4><p>str.replace(regexp|string, newString|function)</p>
+<p>替换（不会改变原字符串，返回替换后的字符串）</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例子去掉字符串中的所有空格</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;ABC  DE  FG&#x27;</span></span><br><span class="line"><span class="keyword">let</span> result = str.<span class="title function_">replace</span>(<span class="regexp">/\s*/g</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str,result) <span class="comment">//ABC  DE  FG   ABCDEFG</span></span><br></pre></td></tr></table></figure></div>
+
+<p>如果第2个参数是函数，该函数的返回值将作为替换文本</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">str.<span class="title function_">replace</span>(<span class="regexp">/elective=(\d*)/g</span>, <span class="keyword">function</span>(<span class="params">match, $1, $2, offset, string</span>) &#123;&#125;)</span><br><span class="line"><span class="comment">//match：正则匹配到的完整内容。</span></span><br><span class="line"><span class="comment">//$1：正则第一个分组匹配的内容，以此类推。</span></span><br><span class="line"><span class="comment">//offset：匹配到的字符串在原字符串中的下标（比如，原字符串是 &#x27;abcd&#x27;，匹配到的子字符串是&#x27;bc&#x27;，那么这个参数将会是 1）</span></span><br><span class="line"><span class="comment">//string：被匹配的原字符串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//示例：将一个字符串中所有单词的首字母大写</span></span><br><span class="line">text.<span class="title function_">replace</span>(<span class="regexp">/\b\w+\b/g</span>, <span class="keyword">function</span>(<span class="params">word</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> word.<span class="title function_">substring</span>(<span class="number">0</span>, <span class="number">1</span>).<span class="title function_">toUpperCase</span>() + word.<span class="title function_">substring</span>(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：字符串常用api</li>
+        <li>本文作者：cc_chen</li>
+        <li>创建时间：2023-02-14 10:42:52</li>
+        <li>
+            本文链接：https://redefine.ohevan.com/2023/02/14/字符串常用api/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/javascript/">#javascript</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/02/14/nvm%E5%92%8Cnrm/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">nvm和nrm</span>
+                                    <span class="post-nav-item">上一篇</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/02/14/%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8api/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">数组常用api</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">字符串常用api</div>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-slice"><span class="nav-text">1.slice()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-split"><span class="nav-text">2.split()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-indexOf"><span class="nav-text">3.indexOf()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-lastIndexOf"><span class="nav-text">4.lastIndexOf()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-concat"><span class="nav-text">5.concat()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-charAt"><span class="nav-text">6.charAt()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-trim"><span class="nav-text">7.trim()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-charCodeAt"><span class="nav-text">7.charCodeAt()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-fromCharCode"><span class="nav-text">8.fromCharCode()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-toUpperCase"><span class="nav-text">9.toUpperCase()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-toLowerCase"><span class="nav-text">10.toLowerCase()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-includes"><span class="nav-text">11.includes()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-replace"><span class="nav-text">12.replace()</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">cc_chen</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
+                <br> 
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.1.0</a>
+        </div>
+        
+        
+        
+            <div id="start_time_div" style="display:none">
+                2023/2/13 11:17:00
+            </div>
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+        
+            <script async data-pjax defer>
+                function odometer_init(){
+                        let el = document.getElementsByClassName('odometer');
+                        for (i = 0; i < el.length; i++) {
+                            od = new Odometer({
+                                el: el[i],
+                                format: '( ddd).dd',
+                                duration: 200
+                            });
+                        }
+                }
+                odometer_init();
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="unfolded-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="folded-tools-list">
+        <li class="right-bottom-tools tool-toggle-show flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/menu-shrink.js"></script>
+
+<script src="/js/tools/go-top-bottom.js"></script>
+
+<script src="/js/tools/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/tools/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/tools/code-block.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/layouts/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/css/odometer-theme-minimal.css">
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

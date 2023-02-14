@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/02/13/hello-world/"/>
+    <link rel="canonical" href="http://example.com/2023/02/14/vscode常用插件和小技巧/"/>
     <!--- Icon Part-->
     <link rel="icon" type="image/png" href="/images/avatar.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.svg">
@@ -18,7 +18,7 @@
     
     <title>
         
-            Hello World |
+            vsCode常用插件和小技巧 |
         
         cc_chen博客
     </title>
@@ -169,9 +169,10 @@
         <div class="article-content-container">
 
             
-            
-                <div class="article-title">
-                    <h1 class="article-title-regular">Hello World</h1>
+             
+                <div class="article-title">         
+                    <img src="https://img1.baidu.com/it/u=2906595543,2341741793&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=718&amp;h=400" alt="vsCode常用插件和小技巧" />
+                    <h1 class="article-title-cover">vsCode常用插件和小技巧</h1>
                 </div>
             
                 
@@ -193,10 +194,21 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-02-13 09:42:14</span>
-        <span class="mobile">2023-02-13 09:42</span>
+        <span class="pc">2023-02-14 11:29:17</span>
+        <span class="mobile">2023-02-14 11:29</span>
     </span>
     
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/vsCode/">vsCode</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -211,31 +223,28 @@
             
 
             <div class="article-content markdown-body">
-                <p>Welcome to <a class="link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link" target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+                <h4 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h4><h5 id="vue2"><a href="#vue2" class="headerlink" title="vue2"></a>vue2</h5><p>Vetur<br>VueHelper (提供Vue、Vue-router、Vuex的代码片段补全功能)<br>Chinese (中文界面，安装的VSCode软件默认使用的是英文语言环境，如需要改成中文，可在扩展中安装中文语言包，安装后重启软件即可)</p>
+<h5 id="vue3"><a href="#vue3" class="headerlink" title="vue3"></a>vue3</h5><p>TypeScript Vue Plugin (Volar)<br>Vue Language Features (Volar)</p>
+<h5 id="css-html"><a href="#css-html" class="headerlink" title="css html"></a>css html</h5><p>HTML CSS Support(CSS 自动补齐)</p>
+<h5 id="ts类型"><a href="#ts类型" class="headerlink" title="ts类型"></a>ts类型</h5><p>json2ts (可以自动生成数据类型)</p>
+<h4 id="小妙招"><a href="#小妙招" class="headerlink" title="小妙招"></a>小妙招</h4><h5 id="配置用户代码片段"><a href="#配置用户代码片段" class="headerlink" title="配置用户代码片段"></a>配置用户代码片段</h5><p>第一步：点开左边的设置图标，选择配置用户代码片段</p>
+<p>第二步： 搜索vue.json</p>
+<p>第三步：写配置代码（可以根据自己的需求写，下面是vue3的示例）</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="string">&quot;Print to console&quot;</span>: &#123;</span><br><span class="line">		<span class="string">&quot;prefix&quot;</span>: <span class="string">&quot;vue3&quot;</span>,</span><br><span class="line">		<span class="string">&quot;body&quot;</span>: [</span><br><span class="line">			<span class="string">&quot;&lt;template&gt;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&lt;div&gt;&lt;/div&gt;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&lt;/template&gt;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&lt;script setup lang=&#x27;ts&#x27;&gt;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;import &#123; ref, reactive &#125; from &#x27;vue&#x27;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&lt;/script&gt;&quot;</span>,</span><br><span class="line"> </span><br><span class="line">			<span class="string">&quot;&lt;style scoped&gt;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&lt;/style&gt;&quot;</span></span><br><span class="line">		],</span><br><span class="line">		<span class="string">&quot;description&quot;</span>: <span class="string">&quot;Log output to console&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-
+<h5 id="写代码特效"><a href="#写代码特效" class="headerlink" title="写代码特效"></a>写代码特效</h5><p>Power Mode 插件</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;window.zoomLevel&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    	<span class="comment">//是否开启</span></span><br><span class="line">        <span class="string">&quot;powermode.enabled&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">//效果样式  “水花-particles”, “烟花-fireworks”, “火焰-flames”, “雪花-magic”, “幽灵-clippy”, “激光-simple-rift”, “大激光-exploding-rift”</span></span><br><span class="line">        <span class="string">&quot;powermode.presets&quot;</span>: <span class="string">&quot;flames&quot;</span>,</span><br><span class="line">    <span class="string">&quot;powermode.explosions.customCss&quot;</span>: &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;powermode.combo.timerEnabled&quot;</span>: <span class="string">&quot;hide&quot;</span>,</span><br><span class="line">    <span class="string">&quot;powermode.combo.counterEnabled&quot;</span>: <span class="string">&quot;hide&quot;</span>,</span><br><span class="line">    <span class="string">&quot;powermode.shake.enabled&quot;</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：Hello World</li>
+        <li>本文标题：vsCode常用插件和小技巧</li>
         <li>本文作者：cc_chen</li>
-        <li>创建时间：2023-02-13 09:42:14</li>
+        <li>创建时间：2023-02-14 11:29:17</li>
         <li>
-            本文链接：https://redefine.ohevan.com/2023/02/13/hello-world/
+            本文链接：https://redefine.ohevan.com/2023/02/14/vsCode常用插件和小技巧/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -247,25 +256,33 @@
             
 
             
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/vsCode/">#vsCode</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/02/13/%E5%89%8D%E7%AB%AF%E8%A7%A3%E6%9E%90excel-%E6%96%87%E4%BB%B6/"
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/02/14/nvm%E5%92%8Cnrm/"
                             >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">前端解析excel 文件</span>
-                                    <span class="post-nav-item">上一篇</span>
+                                    <span class="post-nav-title-item">nvm和nrm</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
                                 </span>
                             </a>
                         </div>
-                    
                     
                 </div>
             
@@ -278,8 +295,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">Hello World</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <div class="page-title">vsCode常用插件和小技巧</div>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#vue2"><span class="nav-text">vue2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#vue3"><span class="nav-text">vue3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#css-html"><span class="nav-text">css html</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ts%E7%B1%BB%E5%9E%8B"><span class="nav-text">ts类型</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%8F%E5%A6%99%E6%8B%9B"><span class="nav-text">小妙招</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5"><span class="nav-text">配置用户代码片段</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%99%E4%BB%A3%E7%A0%81%E7%89%B9%E6%95%88"><span class="nav-text">写代码特效</span></a></li></ol></li></ol>
 
     </div>
 </div>
