@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/02/14/nvm和nrm/"/>
+    <link rel="canonical" href="http://example.com/2023/02/21/js延迟遍历数组/"/>
     <!--- Icon Part-->
     <link rel="icon" type="image/png" href="/images/avatar.svg" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.svg">
@@ -18,7 +18,7 @@
     
     <title>
         
-            nvm和nrm |
+            js延迟遍历数组 |
         
         cc_chen博客
     </title>
@@ -171,8 +171,8 @@
             
              
                 <div class="article-title">         
-                    <img src="https://img0.baidu.com/it/u=3879681075,3951059925&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=888&amp;h=500" alt="nvm和nrm" />
-                    <h1 class="article-title-cover">nvm和nrm</h1>
+                    <img src="https://0xzx.com/wp-content/uploads/2021/05/0f7ab95b.png" alt="js延迟遍历数组" />
+                    <h1 class="article-title-cover">js延迟遍历数组</h1>
                 </div>
             
                 
@@ -194,8 +194,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-02-14 11:10:26</span>
-        <span class="mobile">2023-02-14 11:10</span>
+        <span class="pc">2023-02-21 14:34:39</span>
+        <span class="mobile">2023-02-21 14:34</span>
     </span>
     
     
@@ -204,7 +204,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/npm-%E6%8F%92%E4%BB%B6/">npm 插件</a>&nbsp;
+                        <a href="/tags/javascript/">javascript</a>&nbsp;
                     </li>
                 
             </ul>
@@ -223,18 +223,8 @@
             
 
             <div class="article-content markdown-body">
-                <h4 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a>nvm</h4><h5 id="1-安装nvm"><a href="#1-安装nvm" class="headerlink" title="1.安装nvm"></a>1.安装nvm</h5><p>windows github（程序员交友平台）地址<br><a class="link" target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<img lazyload src="/images/loading.svg" data-src="/images/nrmAndnvm.png" class="[class names]" title="[width] [height] " alt="title text">
-
-<h5 id="2-Nvm-常用命令操作"><a href="#2-Nvm-常用命令操作" class="headerlink" title="2.Nvm 常用命令操作"></a>2.Nvm 常用命令操作</h5><p>nvm list 查看现在所有安装的node版本</p>
-<p>nvm list available 查看nodejs 官方的所有版本</p>
-<p>nvm install （版本号）下载对应的node版本号</p>
-<p>nvm use 切换node版本</p>
-<h4 id="nrm"><a href="#nrm" class="headerlink" title="nrm"></a>nrm</h4><p>nrm 是一个 npm 源管理器，允许你快速地在 npm源间切换。</p>
-<h5 id="1-首先安装-npm-install-g-nrm"><a href="#1-首先安装-npm-install-g-nrm" class="headerlink" title="1.首先安装 npm install -g nrm"></a>1.首先安装 npm install -g nrm</h5><h5 id="2-常用命令"><a href="#2-常用命令" class="headerlink" title="2.常用命令"></a>2.常用命令</h5><p>nrm ls 查看可选源</p>
-<p>nrm use （源）切换源</p>
-<p>nrm add （名称）（源）</p>
-<p>测试速度 nrm test npm</p>
+                <p>javascript 如何实现每隔一秒遍历一个数组元素呢？下面是我自己写的一个demo,实现了数组的延迟遍历</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">asyncFor</span> = <span class="keyword">function</span>(<span class="params">time = <span class="number">1000</span></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">  <span class="keyword">let</span> detTime  = <span class="literal">null</span></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">fn</span> = (<span class="params">arr, index</span>)=&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[index])</span><br><span class="line">    ++index</span><br><span class="line">    <span class="keyword">if</span>(index &lt; arr.<span class="property">length</span>) &#123;</span><br><span class="line">      detTime = <span class="built_in">setTimeout</span>(fn, time, arr, index)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(detTime)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  detTime = <span class="built_in">setTimeout</span>(fn, time, <span class="variable language_">this</span>, index)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">arr.<span class="title function_">asyncFor</span>()</span><br></pre></td></tr></table></figure></div>
 
             </div>
 
@@ -242,11 +232,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：nvm和nrm</li>
+        <li>本文标题：js延迟遍历数组</li>
         <li>本文作者：cc_chen</li>
-        <li>创建时间：2023-02-14 11:10:26</li>
+        <li>创建时间：2023-02-21 14:34:39</li>
         <li>
-            本文链接：https://redefine.ohevan.com/2023/02/14/nvm和nrm/
+            本文链接：https://redefine.ohevan.com/2023/02/21/js延迟遍历数组/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -261,7 +251,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/npm-%E6%8F%92%E4%BB%B6/">#npm 插件</a>&nbsp;
+                            <a href="/tags/javascript/">#javascript</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -273,13 +263,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/02/14/vsCode%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%92%8C%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+                            href="/2023/02/21/vue%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%87%AA%E9%80%82%E5%BA%94%E6%96%B9%E6%A1%88/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">vsCode常用插件和小技巧</span>
+                                    <span class="post-nav-title-item">vue移动端自适应方案</span>
                                     <span class="post-nav-item">上一篇</span>
                                 </span>
                             </a>
@@ -289,10 +279,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/02/14/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8api/"
+                            href="/2023/02/14/vsCode%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%92%8C%E5%B0%8F%E6%8A%80%E5%B7%A7/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">字符串常用api</span>
+                                    <span class="post-nav-title-item">vsCode常用插件和小技巧</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -356,8 +346,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">nvm和nrm</div>
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#nvm"><span class="nav-text">nvm</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85nvm"><span class="nav-text">1.安装nvm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Nvm-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9C"><span class="nav-text">2.Nvm 常用命令操作</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nrm"><span class="nav-text">nrm</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%A6%96%E5%85%88%E5%AE%89%E8%A3%85-npm-install-g-nrm"><span class="nav-text">1.首先安装 npm install -g nrm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">2.常用命令</span></a></li></ol></li></ol>
+        <div class="page-title">js延迟遍历数组</div>
+        
 
     </div>
 </div>
